@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+header {
+    background-color: #222;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+header p {
+    margin-top: 0.3rem;
+    font-weight: 300;
+}
+nav {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ff9800;
+}
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+h2 {
+    color: #ff9800;
+    margin-bottom: 1rem;
+}
+.skills, .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.card {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+input, textarea {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+button {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e68900;
+}
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+/* Dark mode */
+body.dark {
+    background-color: #181818;
+    color: #f0f0f0;
+}
+body.dark header {
+    background-color: #000;
+}
+body.dark nav {
+    background-color: #111;
+}
+body.dark .card {
+    background-color: #222;
+    color: #f0f0f0;
+}
+.dark-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
